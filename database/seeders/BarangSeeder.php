@@ -17,10 +17,10 @@ class BarangSeeder extends Seeder
         for($i = 1; $i <= 50; $i++)
         {
         DB::table('tb_barang')->insert([
-            'kd_barang'=> $faker->numberBetween(100-120),
+            'kd_barang'=> $faker->numberBetween($min=100001, $max=190000),
             'nm_barang'=> $faker->name,
-            'harga' =>$faker->numberBetween(1000,2000),
-            'id_kategori' =>$faker->numberBetween(1-2),
+            'harga' =>$faker->numberBetween($min=1000,$max=9000),
+            'id_kategori' =>$faker->numberBetween($min=1, $max=5),
 
         ]);
     }
